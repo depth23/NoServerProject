@@ -253,7 +253,16 @@ var quoteSource = [
     this.getQuote = function() {
         return quoteSource;
     };
+//    this.getRandomQuote = function() {
+//        return quoteSource[Math.floor(Math.random() * quoteSource.length)].Quote;
+//    };
+    
     this.getRandomQuote = function() {
-        return quoteSource[Math.floor(Math.random() * quoteSource.length)].Quote;
+        var data = quoteSource[Math.floor(Math.random() * quoteSource.length)];
+        var obj = {};
+        obj.Quote = data.Quote;
+        obj.Book = data.Book;
+        obj.Author = data.Author;
+        return obj;
     };
 });
