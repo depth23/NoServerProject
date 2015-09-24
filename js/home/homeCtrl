@@ -1,0 +1,9 @@
+var app = angular.module('quoteApp');
+
+app.controller('homeCtrl', function($scope, quoteService) {
+    $scope.quoteButton = quoteService.getRandomQuote();
+    $scope.getQuote = function() {
+        $scope.quote = quoteService.getRandomQuote();
+    }
+    console.log(quoteService.getRandomQuote());
+});
