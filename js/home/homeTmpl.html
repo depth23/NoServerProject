@@ -9,11 +9,11 @@
     </h3>
 
     <h3 class='homeText' ng-show="details">
-        - {{details.Quote}}
+        <a href='#/quotes'>- {{details.Quote}}</a>
         <br />
-        - {{details.Book}} -
+        <a href='#/classics'>- {{details.Book}} -</a>
         <br />
-       - {{details.Author}} -
+       <a href='#/authors'>- {{details.Author}} -</a>
         <br />
     </h3>
     <button class='getQuoteButton' ng-click="getQuote()">Get Your Quote!</button>
