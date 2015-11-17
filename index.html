@@ -66,7 +66,7 @@
         <div class="header-bottom"></div>
     </div>
         <div class='backgroundContainer wrap'>
-                <ng-view></ng-view>
+                <ng-view="filter: Search"></ng-view>
         </div>
         <footer class='footer'>
             <h1 class='footerItem'>
@@ -84,19 +84,15 @@
                 </copyright-directive>
             </h1>
                 <h1 class='footerItem'>
-                    <a href=''>sitemap</a>
-<!--
-            
-                        <div>
-                            <a href='#/'><ul>Home</ul></a>
-                            <a href='#/authors'><ul>Authors</ul></a>
-                            <a href='#/classics'><ul>Classics</ul></a>
-                            <a href='#quotes'><ul>Quotes</ul></a>
-                            <a href='#/aboutUs'><ul>About Us</ul></a>
-                            <a href='#/contactUs'><ul>Contact Us</ul></a>
-                        </div>   
--->
-                 
+                    <a  ng-hide="sitemap">sitemap</a>
+                        <select ng-show="sitemap">
+                            <option><a href='#/'><ul>Home</ul></a></option>
+                            <option><a href='#/authors'><ul>Authors</ul></a></option>
+                            <option><a href='#/classics'><ul>Classics</ul></a></option>
+                            <option><a href='#quotes'><ul>Quotes</ul></a></option>
+                            <option><a href='#/aboutUs'><ul>About Us</ul></a></option>
+                            <option><a href='#/contactUs'><ul>Contact Us</ul></a></option>
+                        </select>   
                 </h1>
                 <h1 class='footerItem'><a href='#/contactUs/'>contact</a></h1>
                 <h1 class='footerItem'><a href=''>to top</a></h1>
