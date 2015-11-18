@@ -21,43 +21,45 @@
                 <h1 class='navBar'><a href="#/quotes">Quotes</a></h1>
                 <h1 class='navBar'><a href="#/aboutUs">AboutUs</a></h1>
                 <h1 class='navBar'><a href="#/contactUs">ContactUs</a></h1>
+<!--
                 <i class="fa fa-search fa-1x"></i>
-                <input type='text' ng-model='Search' class='search' placeholder='Search...'></input>
+                <input type='text' ng-model='search.$' class='search' placeholder='Search...'></input>
+-->
                 <div class='headerLinks'>
                     <a href='https://www.facebook.com/'>
                         <span id='headerIcons' class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i> 
-                            <i class="fa fa-facebook fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Facebook"></i> 
+                            <i class="fa fa-facebook fa-stack-1x" title="Facebook"></i>
                         </span>
                     </a>
                     <a href='https://instagram.com/'>
                         <span id='headerIcons' class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i> 
-                            <i class="fa fa-instagram fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Instagram"></i> 
+                            <i class="fa fa-instagram fa-stack-1x" title="Instagram"></i>
                         </span>
                     </a>
                     <a href='https://twitter.com/'>
                         <span id='headerIcons' class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                          <i class="fa fa-twitter fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Twitter"></i>
+                          <i class="fa fa-twitter fa-stack-1x" title="Twitter"></i>
                         </span>
                     </a>
                     <a href='https://www.wikipedia.org/'>
                         <span id='headerIcons' class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                            <i class="fa fa-wikipedia-w fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Wikipedia"></i>
+                            <i class="fa fa-wikipedia-w fa-stack-1x" title="Wikipedia"></i>
                         </span>
                     </a>
                     <a href='https://amazon.com/'>
                         <span id='headerIcons' class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                            <i class="fa fa-amazon fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Amazon"></i>
+                            <i class="fa fa-amazon fa-stack-1x" title="Amazon"></i>
                         </span>
                     </a>
                      <a href='https://tumblr.com/'>
                         <span id='headerIcons' class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                            <i class="fa fa-tumblr-square fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Tumblr"></i>
+                            <i class="fa fa-tumblr-square fa-stack-1x" title="Tumblr"></i>
                         </span>
                     </a>
                 </div>
@@ -66,7 +68,14 @@
         <div class="header-bottom"></div>
     </div>
         <div class='backgroundContainer wrap'>
-                <ng-view="filter: Search"></ng-view>
+          <ng-view>
+            <div ng-model="" ng-repeat="quoteObj in quoteSource | filter: Search">
+              <span>{{quoteObj.image}}</span>
+              <span>{{quoteObj.book}}</span>
+              <span>{{quoteObj.author}}</span>
+              <span>{{quoteObj.quote}}</span>
+            </div>
+          </ng-view>
         </div>
         <footer class='footer'>
             <h1 class='footerItem'>
@@ -95,43 +104,43 @@
                         </select>   
                 </h1>
                 <h1 class='footerItem'><a href='#/contactUs/'>contact</a></h1>
-                <h1 class='footerItem'><a href=''>to top</a></h1>
+<!--                <h1 class='footerItem'><a href=''>to top</a></h1>-->
                 <br />
                 <div class='footerLinks'>
                     <a href='https://www.facebook.com/'>
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i> 
-                            <i class="fa fa-facebook fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Facebook"></i> 
+                            <i class="fa fa-facebook fa-stack-1x" title="Facebook"></i>
                         </span>
                     </a>
                     <a href='https://instagram.com/'>
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i> 
-                            <i class="fa fa-instagram fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Instagram"></i> 
+                            <i class="fa fa-instagram fa-stack-1x" title="Instagram"></i>
                         </span>
                     </a>
                     <a href='https://twitter.com/'>
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                          <i class="fa fa-twitter fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Twitter"></i>
+                          <i class="fa fa-twitter fa-stack-1x" title="Twitter"></i>
                         </span>
                     </a>
                     <a href='https://www.wikipedia.org/'>
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                            <i class="fa fa-wikipedia-w fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Wikipedia"></i>
+                            <i class="fa fa-wikipedia-w fa-stack-1x" title="Wikipedia"></i>
                         </span>
                     </a>
                     <a href='https://amazon.com/'>
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                            <i class="fa fa-amazon fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Amazon"></i>
+                            <i class="fa fa-amazon fa-stack-1x" title="Amazon"></i>
                         </span>
                     </a>
                     <a href='https://tumblr.com/'>
                         <span class="fa-stack fa-lg">
-                            <i class="fa fa-square-o fa-stack-2x"></i>
-                            <i class="fa fa-tumblr-square fa-stack-1x"></i>
+                            <i class="fa fa-square-o fa-stack-2x" title="Tumblr"></i>
+                            <i class="fa fa-tumblr-square fa-stack-1x" title="Tumblr"></i>
                         </span>
                     </a>
                 </div>

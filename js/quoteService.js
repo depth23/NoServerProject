@@ -8,7 +8,7 @@ var quoteSource = [
         Book: 'To Kill A Mocking Bird',
         Author: 'Harper Lee',
         Quote: '"You never understand a person until you consider things from his point of view… until you climb into his skin and walk around in it."',
-        Amazon: 'http://www.amazon.com/Kill-Mockingbird-50th-Anniversary/dp/B00QQ70MO0/ref=sr_1_12?s=books&ie=UTF8&qid=1442962705&sr=1-12&keywords=to+kill+a+mockingbird'
+        Amazon: 'http://ecx.images-amazon.com/images/I/418Q9Azt1pL._SX267_BO1,204,203,200_.jpg'
     },
     {
         image: 'https://d.gr-assets.com/books/1320399351s/1885.jpg',

@@ -2,6 +2,7 @@
     text-decoration: none;
     color: inherit;
     box-sizing: border-box;
+/*    outline: 1px solid yellow;*/
 }
 
 html {
@@ -43,8 +44,9 @@ body {
 }
 
 .width80 {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 0;
 }
 
 .header {
@@ -94,11 +96,11 @@ header {
 }
 
 .navBar {
-    height: 6px;
-    width: 165px; 
+    height: 0em;
+    width: 3.9em; 
     display: inline-block;
     color: #E3D3B8;
-    font-size: 40px;
+    font-size: 3em;
     font-family: 'Tangerine', cursive;
     text-align: center;
     opacity: .65;
@@ -226,13 +228,13 @@ header {
 
 .footerItem {
     height: 22%;
-    width: 332px;
+    width: 33%;
     display: inline-block;
 /*    border: 2px solid green;*/
     text-align: center;
     text-decoration: none;
     color: gray;
-    font-size: 36px;
+    font-size: 3em;
     font-family: 'Tangerine', cursive;
     align-content: center;
 }
@@ -364,39 +366,46 @@ header {
     background-size: auto;
     background-repeat:repeat-x; 
     background-attachment: fixed;
-    align-content: center;
+/*    align-content: center;*/
+}
+
+.classicsContainer {
+  position: relative;
+  left: 10.5em;
+  width: 75%;
 }
 
 .classicsItem {
+    width: 90%;
     color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: no-wrap;
     justify-content: space-between;
-    margin-top: 25px;
-    margin-left: 33%;
-    margin-right: 26%;
-    font-size: 35px;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 4em;
     font-family: 'Tangerine', cursive;
     
 }
 
 .bookImage {
-    height: 120px;
-    width: 80px;
+    height: 4em;
+    width: 3em;
 }
 
 .bookImage:hover {
-    height: 130px;
-    width: 90px;
+    height: 5em;
+    width: 4em;
     color: darkcyan;
     background: black;
     opacity: .50;
 }
 
 .bookImage:active {
-    height: 140px;
-    width: 100px;
+    height: 4em;
+    width: 3em;
     color: white;
     background: black;
     opacity: .85;
@@ -445,13 +454,13 @@ header {
 
 .outerForm {
     heitht: 70%;
-    width: 22%;
+    width: 50%;
     background: black;
     opacity: .85;
     display: flex;
     justify-content: center;
     position: absolute;
-    left:40%;
+    left:28%;
     top:60%;
     top:60%;
 }
@@ -460,12 +469,26 @@ header {
     font-family: 'Tangerine', cursive;
     font-size: 35px;
     height: 75%;
-    width: 53%;
+    width: 75%;
     background: #E3D3B8;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-/*    opacity: 1;*/
+    display: block;
+    
+}
+
+.formName {
+  text-align: center;
+  display: block;
+}
+
+.innerFormElement {
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.formSubmit {
+  display: block;
+  margin: 0 auto;
 }
 
 .flex-row {
